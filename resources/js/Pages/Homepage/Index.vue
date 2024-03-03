@@ -1,9 +1,11 @@
 <script setup>
 import GuestLayout from '@/Layouts/GuestLayout.vue';
 import Gallery from "@/Components/Gallery.vue";
+
+const props = defineProps(['media'])
 </script>
 <template>
     <GuestLayout>
-        <Gallery />
+        <Gallery :media="media" />
     </GuestLayout>
 </template>

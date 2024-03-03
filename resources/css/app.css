@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1{
+        @apply text-6xl xl:text-8xl text-gray-800 dark:text-gray-300 mb-12 text-center font-bold;
+    }
+
+    .content h2{
+        @apply py-6 font-semibold text-2xl xl:text-4xl text-gray-800 dark:text-gray-300;
+    }
+
+    .content h3{
+        @apply py-2 font-semibold text-xl xl:text-2xl text-gray-800 dark:text-gray-300;
+    }
+
+    .content p, .content ul{
+        @apply py-2 text-base xl:text-lg text-gray-700 dark:text-gray-500;
+    }
+
+    .content strong, .content p strong, .content b, .content p b{
+        @apply font-bold;
+    }
+
+    .content ul{
+        @apply list-disc list-inside;
+    }
+
+    .content a, .content p a{
+        @apply font-bold underline hover:no-underline hover:text-black underline-offset-2 transition-all duration-500 dark:hover:text-gray-300;
+    }
+
+    .dot-before{
+        @apply before:content-['·'] before:pr-2;
+    }
+}
